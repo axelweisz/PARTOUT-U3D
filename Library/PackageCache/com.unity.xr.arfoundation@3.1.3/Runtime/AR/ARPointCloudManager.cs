@@ -189,7 +189,7 @@ namespace UnityEngine.XR.ARFoundation
             Allocator allocator) where T : struct
         {
             var dstArray = new NativeArray<T>(currentArray.Length + lengthToCopy, allocator);
-            NativeArray<T>.Copy(currentArray, dstArray);
+            NativeArray<T>.Copy(currentArray, dstArray, currentArray.Length);
             NativeArray<T>.Copy(arrayToAppend, 0, dstArray, currentArray.Length, lengthToCopy);
             currentArray.Dispose();
             currentArray = dstArray;

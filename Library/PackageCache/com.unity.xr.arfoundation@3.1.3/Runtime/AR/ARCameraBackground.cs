@@ -371,7 +371,10 @@ namespace UnityEngine.XR.ARFoundation
         {
             if (SystemInfo.graphicsDeviceType == GraphicsDeviceType.OpenGLES3)
             {
+                // AR_FOUNDATION_EDITOR_REMOTE: calling commandBuffer.IssuePluginEvent is crashing Unity Editor 2019.2 and freezing newer versions of Unity
+                #if !UNITY_EDITOR
                 commandBuffer.IssuePluginEvent(s_ResetGlStateFuncPtr, 0);
+                #endif
             }
         }
 

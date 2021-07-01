@@ -683,6 +683,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ARFoundationRemote.Meshing.csproj">
+      <Project>{A8453CEA-3F4E-10A2-A24A-5256102DF5A0}</Project>
+      <Name>ARFoundationRemote.Meshing</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
       <Project>{5A406848-B6E9-DAF0-9F85-CA2C191597A2}</Project>
       <Name>Unity.RenderPipelines.Core.Runtime</Name>
